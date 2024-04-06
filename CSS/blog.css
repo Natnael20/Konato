@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-primary: #004274;
+    --bs-secondary: #00AEFF;
+    --bs-grey: #F2F4F8;
+    --bs-light: #fff;
+    --bs-black: #000;
+}
+
+.hero-overly {
+    background: url("https://cdn.pixabay.com/photo/2019/10/17/02/39/villa-4555824_1280.jpg") no-repeat;
+    background-size: cover;
+    background-clip: padding-box;
+    background-position: center;
+    height: 72.5vh;
+    position: relative;
+    overflow: hidden;
+    padding: 1px;
+    /* Add padding to prevent collapsing margins */
+}
+
+.hero-overly::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+
+.left-img {
+    position: relative;
+    overflow: visible;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.left-img::before {
+    content: '15 \A Jan';
+    position: absolute;
+    background-color: var(--bs-secondary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 13%;
+    height: 2.5cm;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    white-space: pre-line;
+    /* Add this line to allow line breaks */
+}
+
+.left-img:hover::before {
+    background-color: inherit;
+    color: var(--bs-secondary);
+}
+
+.user-response {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.user-response p:nth-child(1):hover,
+.user-response p:nth-child(2):hover {
+    color: var(--bs-secondary);
+    cursor: pointer;
+}
+
+.search-section {
+    line-height: 3;
+}
+
+.search-input input[type="search"] {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+
+}
+
+.search-button {
+    color: #fff;
+    border: 1px solid var(---bs-secondary);
+    background-color: var(--bs-secondary);
+}
+
+.search-button:hover {
+    border: 1px solid var(---bs-secondary);
+}
+
+/*right contents*/
+
+.categories,
+.recent-post,
+.Tag-clouds,
+.instagram-feeds,
+.news {
+    margin-top: 25%;
+}
+
+.categories h4 {
+    padding: 15px;
+}
+
+.categories ul li {
+    border: none;
+    line-height: 3;
+}
+
+.categories ul li:hover {
+    color: var(--bs-secondary);
+    cursor: pointer;
+}
+
+.recent-post {
+    padding: 15px;
+}
+
+.posts {
+    margin-top: 20%;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    gap: 10px;
+}
+
+.post-detail {
+    display: grid;
+    line-height: 1;
+    margin-left: 3%;
+    justify-content: center;
+}
+
+.post-detail p:nth-child(1):hover {
+    color: var(--bs-secondary);
+    cursor: pointer;
+}
+
+.Tag-clouds ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15%;
+}
+
+.Tag-clouds ul li {
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Tag-clouds ul li:hover {
+    background-color: var(--bs-secondary);
+    color: #fff;
+}
+
+.instagram-feeds ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-wrap: wrap;
+    margin-top: 15%;
+}
+
+.instagram-feeds ul li {
+    border: none;
+}
+
+.news {
+    display: grid;
+    line-height: 3;
+}
+
+.news input[type="email"] {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.news button {
+    background-color: var(--bs-secondary);
+    color: #fff;
+}
+
+.news button:hover {
+    border: 1px solid var(--bs-secondary);
+}

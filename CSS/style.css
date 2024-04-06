@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-primary: #004274;
+    --bs-secondary: #00AEFF;
+    --bs-grey: #F2F4F8;
+    --bs-light: #fff;
+    --bs-black: #000;
+}
+
+
+#navbar-container {
+    background-color: var(--bs-primary);
+}
+
+nav {
+    background-color: var(--bs-primary);
+}
+
+.left-content ul {
+    display: flex;
+    gap: 20px;
+}
+
+
+.left-content ul li a {
+    color: var(--bs-light);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.left-content ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bs-secondary);
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: all .5s ease-in-out;
+}
+
+.left-content ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-link:hover {
+    color: var(--bs-secondary);
+}
+
+.right-content {
+    display: inline-flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    color: var(--bs-light);
+}
+
+.right-content p a {
+    color: var(--bs-light);
+    text-decoration: none;
+    border-bottom: 1px dotted white;
+}
+
+.btn-1 {
+    padding: 10px 25px;
+    color: var(--bs-light);
+    background: var(--bs-secondary);
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+.btn-1:hover {
+    background: inherit;
+    color: var(--bs-secondary);
+    border: 1px solid var(--bs-secondary);
+}
+
+/* -------------------- navbar end -----------------*/
+
+header {
+    width: 100%;
+    height: 100%;
+}
+
+.input-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 35%;
+    display: inline-block;
+    /* Ensure that the wrapper only takes up the necessary space */
+}
+
+#search-place[type="search"] {
+    padding: 10px 35px;
+    /* Adjust this value according to the size of the icon */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    width: 100%;
+
+}
+
+.search-icon {
+    position: absolute;
+    left: 5px;
+    /* Adjust the position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    /* Adjust the color as needed */
+}
+
+.dropdown-toggle {
+    color: var(--bs-black);
+    padding: 10px 35px;
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    padding: 9px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bs-secondary);
+    color: var(--bs-black);
+}
+
+.btn-2 {
+    color: var(--bs-light);
+    background: var(--bs-primary);
+    padding: 10px 20px;
+}
+
+@media screen and (max-width:991px) {
+    .input-wrapper {
+        display: grid;
+        margin: 0 auto;
+    }
+
+    .search-wrapper,
+    .rent-wrapper {
+        width: 100%;
+    }
+}
+
+/*----------------------------- intro content ----------------------------*/
+
+#background-img {
+    background-image: url("https://img.freepik.com/free-photo/3d-rendering-wooden-house_23-2151264433.jpg?w=826");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#background-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+}
+
+.intro-detail {
+    margin-top: 10%;
+    margin-left: 10%;
+    color: var(--bs-light);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.btn-3 {
+    color: var(--bs-light);
+    padding: 10px 20px;
+    background: var(--bs-secondary);
+    margin-top: 2%;
+}
+
+.btn-3:hover {
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s cubic-bezier(0.71, 0.77, 0.49, 0.77);
+    transition: all 1s cubic-bezier(0.71, 0.77, 0.49, 0.77);
+    background-color: #004274;
+}
+
+.room-detail,
+.property-info {
+    padding: 15px;
+}
+
+.office-img {
+    background: url("https://preview.colorlib.com/theme/konato/assets/img/gallery/section-bg1.jpg.webp") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.office-wrapper {
+    background: var(--bs-secondary);
+    padding: 40px;
+}
+
+@media screen and (min-width:900px) {
+    .office-title {
+        margin-top: 10%;
+    }
+}
+
+.explore-container {
+    background: var(--bs-grey);
+}
+
+.view-property:hover {
+    color: var(--bs-light);
+}
+
+.property-type {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bs-light);
+    margin-top: 8%;
+}
+
+.property-type>div {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.home img {
+    margin: 0 auto;
+}
+
+.property-type>div a {
+    color: #000;
+    text-decoration: none;
+}
+
+.property-type>div:hover a {
+    color: #00AEFF;
+    text-decoration: underline;
+}
+
+.property-type>div::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 2.4;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: rgba(0, 0, 0, .2);
+    transition: all .5s ease-in-out;
+}
+
+.property-type>div:hover::before {
+    top: 0;
+}
+
+.property-type>div:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.subsciption-container {
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter {
+    background: var(--bs-primary);
+}
+
+.subsciption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.newsletter {
+    padding: 30px;
+    color: var(--bs-light);
+    width: 50%;
+    padding: 30px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.user-input #email {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    border-bottom: 1px solid #fff;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+
+.user-input #email::placeholder {
+    color: var(--bs-light);
+}
+
+.house-img {
+    width: 50%;
+    height: 60vh;
+
+}
+.house-img img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:991px) {
+    .subsciption {
+        display: grid;
+    }
+
+    .newsletter,
+    .house-img {
+        width: 100%;
+    }
+}
+
+.btn-subscribe {
+    color: var(--bs-light);
+    background: var(--bs-secondary);
+    padding: 10px 20px;
+}
+
+.btn-subscribe:hover {
+    border: 1px solid var(--bs-secondary);
+    color: inherit;
+}
+
+.footer {
+    height: 70vh;
+    position: relative;
+}
+
+.social-media i {
+    padding: 10px 10px;
+}
+
+.social-media i:hover {
+    transition: all .5s ease-in-out;
+    transform: translateY(-3px);
+    color: #00AEFF;
+}
+
+
+.footer-links {
+    display: grid;
+    line-height: 2.5;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+    opacity: .6;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    transition: all .5s ease-in-out;
+
+}
+
+.reservation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bs-grey);
+    padding: 10px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:991px) {
+    .reservation {
+        position: relative;
+    }
+}
+
+.top {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+    transition: all 1.5s;
+}
+
+.right {
+    opacity: 0;
+    transition: all 1.5s ease-in-out;
+    transform: translateX(50px);
+}
+
+.left {
+    opacity: 0;
+    /* Initially set opacity to 0 */
+    transition: all 1.5s ease-in-out;
+    transform: translateX(-100px);
+    /* Apply translation */
+}
+
+.buttom {
+    opacity: 0;
+    /* Initially set opacity to 0 */
+    transition: all 1.5s ease-in-out;
+    filter: blur(5px);
+    transform: translateY(100px);
+    /* Apply translation */
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
